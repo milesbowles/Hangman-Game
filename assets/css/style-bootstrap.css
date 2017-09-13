@@ -1,11 +1,5 @@
 body {
     margin: 0;
-
-    /*-moz-background-size: cover;*/
-    /*-webkit-background-size: cover;*/
-    /*-o-background-size: cover;*/
-    /*background-size: cover;*/
-
     position: relative;
 }
 
@@ -85,9 +79,9 @@ div.panel-heading {
 }
 
 #gameView {
-    background: url(../images/hangman_bg.jpg) no-repeat center -350px;
+    background: url(../images/hangman_bg.jpg) no-repeat center 60%;
     background-size: cover;
-    position: relative;
+    position: static;
     padding-bottom: 1%;
     height: 15%;
 }
