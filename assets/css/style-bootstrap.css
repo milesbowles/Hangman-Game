@@ -79,7 +79,7 @@ div.panel-heading {
 }
 
 #gameView {
-    background: url(../images/hangman_bg.jpg) no-repeat center 60%;
+    background: url(../images/hangman_bg.jpg) no-repeat center 70%;
     background-size: cover;
     position: static;
     padding-bottom: 1%;

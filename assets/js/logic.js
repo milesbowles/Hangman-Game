@@ -6,29 +6,65 @@ var words = {
     0:{
         word: 'albacore',
         hint: 'A fish!',
+        unique_ltrs: 7,
         positions: ['a','l','b','a','c','o','r','e']
     },
     1:{
         word: 'avacados',
         hint: 'Green',
+        unique_ltrs: 6,
         positions: ['a','v','a','c','a','d','o','s']
     },
     2:{
         word: 'bazookas',
         hint: 'Bubblegum',
+        unique_ltrs: 6,
         positions: ['b','a','z','o','o','k','a','s']
     },
     3:{
         word: 'cerebrum',
         hint: 'Brain',
+        unique_ltrs: 6,
         positions: ['c','e','r','e','b','r','u','m']
+    },
+    4:{
+        word: 'blizzard',
+        hint: 'Snow',
+        unique_ltrs: 7,
+        positions: ['b','l','i','z','z','a','r','d']
+    },
+    5:{
+        word: 'adhesive',
+        hint: 'Glue',
+        unique_ltrs: 7,
+        positions: ['a','d','h','e','s','i','v','e']
+    },
+    6:{
+        word: 'deadline',
+        hint: 'Work',
+        unique_ltrs: 6,
+        positions: ['d','e','a','d','l','i','n','e']
+    },
+    7:{
+        word: 'energize',
+        hint: 'Battery',
+        unique_ltrs: 6,
+        positions: ['e','n','e','r','g','i','z','e']
+    },
+    8:{
+        word: 'interior',
+        hint: 'Crocodile, Alligator',
+        unique_ltrs: 6,
+        positions: ['i','n','t','e','r','i','o','r']
     }
 };
 
 var word;
 var hint;
 var positions;
-var guesses = 0;
+var unique_ltrs;
+var wrong_guesses = 0;
+var right_guesses = 0;
 var play = false;
 
 function hung() {
@@ -36,17 +72,17 @@ function hung() {
 }
 
 function updateGraphic() {
-    if (guesses === 0) {
+    if (wrong_guesses === 0) {
         $("#graphic").attr("src", "assets/images/hangman-1.png");
-    } else if (guesses === 1) {
+    } else if (wrong_guesses === 1) {
         $("#graphic").attr("src", "assets/images/hangman-2.png");
-    } else if (guesses === 2) {
+    } else if (wrong_guesses === 2) {
         $("#graphic").attr("src", "assets/images/hangman-3.png");
-    } else if (guesses === 3) {
+    } else if (wrong_guesses === 3) {
         $("#graphic").attr("src", "assets/images/hangman-4.png");
-    } else if (guesses === 4) {
+    } else if (wrong_guesses === 4) {
         $("#graphic").attr("src", "assets/images/hangman-5.png");
-    } else if (guesses === 5) {
+    } else if (wrong_guesses === 5) {
         $("#play-btn").show(1300);
         hung();
     }
@@ -58,6 +94,7 @@ function getWord() {
     word = words[i].word;
     hint = words[i].hint;
     positions = words[i].positions;
+    unique_ltrs = words[i].unique_ltrs;
     console.log(word);
     console.log(hint);
     console.log(positions);
@@ -72,9 +109,13 @@ function checkGuess(guess, id) {
         }
     }
     if (matched === true) {
+        right_guesses++;
         $(id).css('background-color', 'green').fadeOut(1300);
+        if (right_guesses === unique_ltrs) {
+            console.log("you win!!");
+        }
     } else {
-        guesses++;
+        wrong_guesses++;
         $(id).css('background-color', 'red').fadeOut(1300);
     }
     updateGraphic();
