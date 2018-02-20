@@ -1,6 +1,10 @@
 <div align="center">
-    <a href="">
+    <a href="https://milesbowles.github.io/Hangman-Game/">
         <img src="https://github.com/milesbowles/Hangman-Game/blob/master/images/hangman_logo.png" alt="Hangman Logo" width="200"/>
+    </a>
+</div>
+<div align="center">
+    <a href="https://milesbowles.github.io/Hangman-Game/">
         <img src="https://github.com/milesbowles/Hangman-Game/blob/master/images/hungman.gif" alt="Hangman GIF" width="200"/>
     </a>
 </div>
