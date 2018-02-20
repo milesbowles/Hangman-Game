@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <!--Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="assets/css/style-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style-bootstrap.css">
 
 
 </head>
@@ -22,22 +22,26 @@
         <div class="panel panel-transparent" >
             <div class="panel-heading">
                 <div class="media">
-                    <img class="logo" src="assets/images/hangman_logo.png">
+                    <img class="logo" src="images/hangman_logo.png">
                 </div>
             </div>
         </div>
     </div>
     <div class="col-sm-2 col-md-offset-5">
+        <h4 class="label" id="label">YOU LOSE!</h4>
         <div id="play-btn" class="thumbnail">
-            <h4>PLAY</h4>
+            <h4 id="play-btn-text">PLAY</h4>
         </div>
     </div>
     <div class="col-md-8 col-md-offset-4">
         <div class="panel panel-transparent" >
             <div class="panel-heading">
                 <div class="media">
-                    <img id="graphic" src="assets/images/hungman.gif">
+                    <img id="graphic" src="images/hungman.gif">
                 </div>
+            </div>
+            <div id="hint-btn" class="thumbnail">
+                <h4>Hint</h4>
             </div>
         </div>
     </div>
@@ -221,7 +225,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!--Custom JS-->
-<script type="text/javascript" src="assets/js/logic.js"></script>
+<script type="text/javascript" src="js/logic.js"></script>
 
 </body>
 

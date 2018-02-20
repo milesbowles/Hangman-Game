@@ -1,6 +1,5 @@
 //pick random number between 0 and words.length
 //use this function to pick a word when start button pressed
-//
 
 var words = {
     0:{
@@ -68,22 +67,24 @@ var right_guesses = 0;
 var play = false;
 
 function hung() {
-        $("#graphic").attr("src", "assets/images/hungman.gif");
+        $("#graphic").attr("src", "images/hungman.gif");
 }
 
 function updateGraphic() {
     if (wrong_guesses === 0) {
-        $("#graphic").attr("src", "assets/images/hangman-1.png");
+        $("#graphic").attr("src", "images/hangman-1.png");
     } else if (wrong_guesses === 1) {
-        $("#graphic").attr("src", "assets/images/hangman-2.png");
+        $("#graphic").attr("src", "images/hangman-2.png");
     } else if (wrong_guesses === 2) {
-        $("#graphic").attr("src", "assets/images/hangman-3.png");
+        $("#graphic").attr("src", "images/hangman-3.png");
     } else if (wrong_guesses === 3) {
-        $("#graphic").attr("src", "assets/images/hangman-4.png");
+        $("#graphic").attr("src", "images/hangman-4.png");
     } else if (wrong_guesses === 4) {
-        $("#graphic").attr("src", "assets/images/hangman-5.png");
+        $("#graphic").attr("src", "images/hangman-5.png");
     } else if (wrong_guesses === 5) {
+        $("#play-btn-text").text("PLAY AGAIN");
         $("#play-btn").show(1300);
+        $("#label").text("YOU LOSE!").fadeIn(1300);
         hung();
     }
 }
@@ -112,6 +113,9 @@ function checkGuess(guess, id) {
         right_guesses++;
         $(id).css('background-color', 'green').fadeOut(1300);
         if (right_guesses === unique_ltrs) {
+            $("#play-btn-text").text("PLAY AGAIN");
+            $("#play-btn").show(1300);
+            $("#label").text("YOU WIN!").fadeIn(1300);
             console.log("you win!!");
         }
     } else {
