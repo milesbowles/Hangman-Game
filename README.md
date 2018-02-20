@@ -17,7 +17,7 @@ A simple hangman game complete with funny graphics to make you chuckle. Go ahead
 
 ## Built With
 
-* [Vanilla Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Event handling & DOM manipulation
+* [JQuery](https://jquery.com/) - Event handling & DOM manipulation
 * [Bootstrap](https://getbootstrap.com/) - Front-end styling
 
 #### Graphics
