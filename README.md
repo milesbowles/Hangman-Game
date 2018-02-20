@@ -1,6 +1,6 @@
 <div align="center">
     <a href="">
-        <img src="https://github.com/milesbowles/Hangman-Game/blob/master/images/hungman.gif" alt="Hangman GIF" width="800"/>
+        <img src="https://github.com/milesbowles/Hangman-Game/blob/master/images/hungman.gif" alt="Hangman GIF" width="300"/>
     </a>
 </div>
 
@@ -8,11 +8,7 @@
 
 A simple hangman game complete with funny graphics to make you chuckle. Go ahead, give it a try!
 
-<div align="center">
-    <p>
-        <em><a href="https://milesbowles.github.io/Hangman-Game/">Click Here To Play!<a/></em>
-    </p>
-</div>
+[**Click Here To Play!**](https://milesbowles.github.io/Hangman-Game/)
 
 ## Built With
 
