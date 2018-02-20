@@ -80,10 +80,13 @@ div.panel-heading {
     padding-bottom: 0;
 }
 
-#hint {
+/* #hint-btn {
     background-color: rgba(13, 13, 20, 0.3);
     color: lightgrey;
-}
+    width: 10%;
+    margin: 5% 0 0 15%;
+
+} */
 
 #gameView {
     background: url(../images/hangman_bg.jpg) no-repeat center 70%;
@@ -92,6 +95,7 @@ div.panel-heading {
     padding-bottom: 1%;
     height: 15%;
 }
+
 #pickerView {
     padding-top: 1%;
     padding-bottom: 8%;
